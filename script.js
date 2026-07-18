@@ -147,6 +147,23 @@ window.addEventListener("scroll", () => {
     });
 
 });
+/*==========================
+     MOBILE MENU TOGGLE
+==========================*/
+
+const menuToggle = document.getElementById("menuToggle");
+const navMenu = document.getElementById("navMenu");
+
+menuToggle.addEventListener("click", function(){
+    navMenu.classList.toggle("active");
+});
+
+document.querySelectorAll("#navMenu a").forEach(link => {
+    link.addEventListener("click", function(){
+        navMenu.classList.remove("active");
+    });
+});
+
 const cvBtn = document.getElementById("cvBtn");
 const cvModal = document.getElementById("cvModal");
 const closeCV = document.getElementById("closeCV");
